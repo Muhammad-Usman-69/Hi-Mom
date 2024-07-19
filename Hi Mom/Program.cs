@@ -24,16 +24,22 @@ namespace Hi_Mom
             //Console.WriteLine("My number is " + num);
 
             /* Data type are:
-             Integar - int num = 12;
-             Floating Point Number - float this;
-             Charactr - char x = 'X';
-             Boolean - bool isHardworking = true;
-             String - string name = "Usman";
+             Integar - int num = 12; --> 4 bytes
+             Long - long num = 12; --> 8 bytes
+             Floating Point Number - float this; --> 4 bytes
+             Double - double that; --> 8 bytes
+             Charactr - char x = 'X'; --> 2 bytes
+             Boolean - bool isHardworking = true; --> 1 bit
+             String - string name = "Usman"; --> 2 bytes per character
              */
+
+            //writing info for taking name
+            Console.WriteLine("What's your name?");
+            Console.Write("Name: ");
 
             //taking input by reading line
             string inp = Console.ReadLine();
-            Console.WriteLine(inp);
+            Console.WriteLine("Your name is " + inp + ".");
 
             //stops the console from closing
             Console.ReadLine();
