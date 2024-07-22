@@ -31,7 +31,7 @@ namespace Hi_Mom
              Character - char x = 'X'; --> 2 bytes | Stores true or false values
              Boolean - bool isHardworking = true; --> 1 bit | Stores a single character/letter, surrounded by single quotes
              String - string name = "Usman"; --> 2 bytes per character | Stores a sequence of characters, surrounded by double quotes
-             */
+            */
 
             // for float, writing F is neccesary after decimal number 
             // for double, writing D is optional
@@ -45,7 +45,7 @@ namespace Hi_Mom
              //taking input by reading line
              string inp = Console.ReadLine();
              Console.WriteLine("Your name is " + inp + ".");
-            */
+            //*/
 
             //Type Casting - conversion of variable type to another - Its types are:
 
@@ -55,7 +55,7 @@ namespace Hi_Mom
              char x = 'x';
              int integar = x; //converted to integar following the promotion table
              Console.WriteLine(integar);
-            */
+            //*/
 
             // 2) Explicit Casting - handled manually by the programmer
             /*
@@ -65,7 +65,7 @@ namespace Hi_Mom
              // can also do it using methods
              int var = Convert.ToInt32(15.35);  
              Console.WriteLine(var);
-            */
+            //*/
 
             // Dating age checker
             // taking data from user and typecasting. also doing arithmetic operations and string interpolcation
@@ -75,7 +75,7 @@ namespace Hi_Mom
              Console.Write("Your age: ");
              string age = Console.ReadLine();
              Console.WriteLine($"Hi {name}! Your minimum dating age is: " + ((Convert.ToInt64(age)/2) + 7) );
-            */
+            //*/
 
             // Operations are:
             // 1. Arithmetic - +, -, *, /
@@ -83,12 +83,13 @@ namespace Hi_Mom
             // 3. Assignment - =
             // 4. Comparison - >, <, ==, >=, !=
 
+
             /*
              Console.WriteLine("The arithmetic addition of 5 + 3 is: " + (5 + 3));
              Console.WriteLine("The logical disjunction (||) of true and false (true || false) is: " + (true || false));
              int x = 5; Console.WriteLine("The assignment operation of 5 into integar x (int x = 5) is: " + x);
              Console.WriteLine("The comparison of 420 != 69 is: " + (420 != 69));
-            */
+            //*/
 
             //stops the console from closing
 
@@ -96,7 +97,7 @@ namespace Hi_Mom
             /*
              double x = Math.Sqrt(90);
              Console.WriteLine(x);
-            */
+            //*/
 
             // String Methods
             /*
@@ -109,7 +110,7 @@ namespace Hi_Mom
              Console.WriteLine(str[0]); // returns the char of string according to index
              Console.WriteLine(str.IndexOf("Mom")); // returns the index of given occurance "Mom"
              Console.WriteLine(str.Substring(3)); // returns the string after index 3
-            */
+            //*/
 
 
             Console.ReadLine();
