@@ -68,20 +68,20 @@ namespace Hi_Mom
             */
 
             // Dating age checker
-             // taking data from user and typecasting. also doing arithmetic operations
-            /* 
+            // taking data from user and typecasting. also doing arithmetic operations and string interpolcation
+            /*
              Console.Write("Your name: ");
              string name = Console.ReadLine();
              Console.Write("Your age: ");
              string age = Console.ReadLine();
-             Console.WriteLine("Hi " + name + "! Your minimum dating age is: " + ((Convert.ToInt64(age)/2) + 7) );
+             Console.WriteLine($"Hi {name}! Your minimum dating age is: " + ((Convert.ToInt64(age)/2) + 7) );
             */
 
             // Operations are:
-             // 1. Arithmetic - +, -, *, /
-             // 2. Logical - Conjunction "&&", Disjunction "||", Negation "!"
-             // 3. Assignment - =
-             // 4. Comparison - >, <, ==, >=, !=
+            // 1. Arithmetic - +, -, *, /
+            // 2. Logical - Conjunction "&&", Disjunction "||", Negation "!"
+            // 3. Assignment - =
+            // 4. Comparison - >, <, ==, >=, !=
 
             /*
              Console.WriteLine("The arithmetic addition of 5 + 3 is: " + (5 + 3));
@@ -91,6 +91,27 @@ namespace Hi_Mom
             */
 
             //stops the console from closing
+
+            // Math Class - it has many methods that allows you to perform mathematical tasks on numbers.
+            /*
+             double x = Math.Sqrt(90);
+             Console.WriteLine(x);
+            */
+
+            // String Methods
+            /*
+             string str = "Hi Mom!";
+             Console.WriteLine(str.Length); // return length of string
+             Console.WriteLine(str.ToUpper()); // convert to uppercase
+             Console.WriteLine(str + " I am good"); // concatinate string
+             Console.WriteLine(String.Concat(str, " I am good")); // concatinate string using method
+             Console.WriteLine($"{str} I am good "); // string interpolation
+             Console.WriteLine(str[0]); // returns the char of string according to index
+             Console.WriteLine(str.IndexOf("Mom")); // returns the index of given occurance "Mom"
+             Console.WriteLine(str.Substring(3)); // returns the string after index 3
+            */
+
+
             Console.ReadLine();
         }
     }
