@@ -63,6 +63,28 @@ namespace Hi_Mom
              Console.WriteLine(integar);
             */
 
+            // Dating age checker
+             // taking data from user and typecasting. also doing arithmetic operations
+            /* 
+             Console.Write("Your name: ");
+             string name = Console.ReadLine();
+             Console.Write("Your age: ");
+             string age = Console.ReadLine();
+             Console.WriteLine("Hi " + name + "! Your minimum dating age is: " + ((Convert.ToInt64(age)/2) + 7) );
+            */
+
+            // Operations are:
+             // 1. Arithmetic - +, -, *, /
+             // 2. Logical - Conjunction "&&", Disjunction "||", Negation "!"
+             // 3. Assignment - =
+             // 4. Comparison - >, <, ==, >=, !=
+
+            /*
+             Console.WriteLine("The arithmetic addition of 5 + 3 is: " + (5 + 3));
+             Console.WriteLine("The logical disjunction (||) of true and false (true || false) is: " + (true || false));
+             int x = 5; Console.WriteLine("The assignment operation of 5 into integar x (int x = 5) is: " + x);
+             Console.WriteLine("The comparison of 420 != 69 is: " + (420 != 69));
+            */
 
             //stops the console from closing
             Console.ReadLine();
