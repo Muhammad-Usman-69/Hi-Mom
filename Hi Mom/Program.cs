@@ -83,7 +83,6 @@ namespace Hi_Mom
             // 3. Assignment - =
             // 4. Comparison - >, <, ==, >=, !=
 
-
             /*
              Console.WriteLine("The arithmetic addition of 5 + 3 is: " + (5 + 3));
              Console.WriteLine("The logical disjunction (||) of true and false (true || false) is: " + (true || false));
@@ -110,6 +109,7 @@ namespace Hi_Mom
              Console.WriteLine(str[0]); // returns the char of string according to index
              Console.WriteLine(str.IndexOf("Mom")); // returns the index of given occurance "Mom"
              Console.WriteLine(str.Substring(3)); // returns the string after index 3
+             Console.WriteLine($"\"{str}\""); // return escape sequence characters like " etc
             //*/
 
 
