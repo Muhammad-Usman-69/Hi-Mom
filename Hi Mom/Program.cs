@@ -2,14 +2,39 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Hi_Mom
 {
     internal class Program
     {
+        // static means the method belongs to this class (Program)
+        // void means it doesn't return anything
+        static void HiMom(string name)
+        {
+            Console.WriteLine("Hi Mom by " + name);
+        }
+
+        // other than void, we can use data type which can return value
+        static int YearlySalary(int mothlySalary)
+        {
+            return mothlySalary * 12;
+        }
+
+        // we can also have same function with more or less args
+        static int YearlySalary(int mothlySalary, int tax)
+        {
+            return (mothlySalary - tax) * 12;
+        }
+
         static void Main(string[] args)
         {
+            HiMom("Usman");
+
+            Console.WriteLine("Your yearly salary is Rs." + YearlySalary(55000));
+            Console.WriteLine("Your yearly salary with tax is Rs." + YearlySalary(55000, 5000)); // same function is overloading due to number of args
+
             //this is a single line comment
             /*
              this is a multi-line comment
@@ -38,13 +63,13 @@ namespace Hi_Mom
             // bonus: C# is a typesafe language which means a variable can't change its type across the code. An int variable can't be assigned a string
 
             /* Example of taking input
-             //writing info for taking name
-             Console.WriteLine("What's your name?");
-             Console.Write("Name: ");
-             
-             //taking input by reading line
-             string inp = Console.ReadLine();
-             Console.WriteLine("Your name is " + inp + ".");
+            //writing info for taking name
+            Console.WriteLine("What's your name?");
+            Console.Write("Name: ");
+
+            //taking input by reading line
+            string inp = Console.ReadLine();
+            Console.WriteLine("Your name is " + inp + ".");
             //*/
 
             //Type Casting - conversion of variable type to another - Its types are:
@@ -52,29 +77,30 @@ namespace Hi_Mom
             // 1) Implicit Casting - handled automatically by the compiler - a promotion table for char is following
             // char to int to long to float to double
             /*
-             char x = 'x';
-             int integar = x; //converted to integar following the promotion table
-             Console.WriteLine(integar);
+            char x = 'x';
+            int integar = x; //converted to integar following the promotion table
+            Console.WriteLine(integar);
             //*/
 
             // 2) Explicit Casting - handled manually by the programmer
             /*
-             int integar = (int) 10.5; //converted from float to integar
-             Console.WriteLine(integar);
+            int integar = (int)10.5; //converted from float to integar
+            Console.WriteLine(integar);
 
-             // can also do it using methods
-             int var = Convert.ToInt32(15.35);  
-             Console.WriteLine(var);
+            // can also do it using methods
+            int
+            var = Convert.ToInt32(15.35);
+            Console.WriteLine(var);
             //*/
 
             // Dating age checker
             // taking data from user and typecasting. also doing arithmetic operations and string interpolcation
             /*
-             Console.Write("Your name: ");
-             string name = Console.ReadLine();
-             Console.Write("Your age: ");
-             string age = Console.ReadLine();
-             Console.WriteLine($"Hi {name}! Your minimum dating age is: " + ((Convert.ToInt64(age)/2) + 7) );
+            Console.Write("Your name: ");
+            string name = Console.ReadLine();
+            Console.Write("Your age: ");
+            string age = Console.ReadLine();
+            Console.WriteLine($"Hi {name}! Your minimum dating age is: " + ((Convert.ToInt64(age) / 2) + 7));
             //*/
 
             // Operations are:
@@ -84,56 +110,57 @@ namespace Hi_Mom
             // 4. Comparison - >, <, ==, >=, !=
 
             /*
-             Console.WriteLine("The arithmetic addition of 5 + 3 is: " + (5 + 3));
-             Console.WriteLine("The logical disjunction (||) of true and false (true || false) is: " + (true || false));
-             int x = 5; Console.WriteLine("The assignment operation of 5 into integar x (int x = 5) is: " + x);
-             Console.WriteLine("The comparison of 420 != 69 is: " + (420 != 69));
+            Console.WriteLine("The arithmetic addition of 5 + 3 is: " + (5 + 3));
+            Console.WriteLine("The logical disjunction (||) of true and false (true || false) is: " + (true || false));
+            int x = 5;
+            Console.WriteLine("The assignment operation of 5 into integar x (int x = 5) is: " + x);
+            Console.WriteLine("The comparison of 420 != 69 is: " + (420 != 69));
             //*/
 
             //stops the console from closing
 
             // Math Class - it has many methods that allows you to perform mathematical tasks on numbers.
             /*
-             double x = Math.Sqrt(90);
-             Console.WriteLine(x);
+            double x = Math.Sqrt(90);
+            Console.WriteLine(x);
             //*/
 
             // String Methods
             /*
-             string str = "Hi Mom!";
-             Console.WriteLine(str.Length); // return length of string
-             Console.WriteLine(str.ToUpper()); // convert to uppercase
-             Console.WriteLine(str + " I am good"); // concatinate string
-             Console.WriteLine(String.Concat(str, " I am good")); // concatinate string using method
-             Console.WriteLine($"{str} I am good "); // string interpolation
-             Console.WriteLine(str[0]); // returns the char of string according to index
-             Console.WriteLine(str.IndexOf("Mom")); // returns the index of given occurance "Mom"
-             Console.WriteLine(str.Substring(3)); // returns the string after index 3
-             Console.WriteLine($"\"{str}\""); // return escape sequence characters like " etc
+            string str = "Hi Mom!";
+            Console.WriteLine(str.Length); // return length of string
+            Console.WriteLine(str.ToUpper()); // convert to uppercase
+            Console.WriteLine(str + " I am good"); // concatinate string
+            Console.WriteLine(String.Concat(str, " I am good")); // concatinate string using method
+            Console.WriteLine($"{str} I am good "); // string interpolation
+            Console.WriteLine(str[0]); // returns the char of string according to index
+            Console.WriteLine(str.IndexOf("Mom")); // returns the index of given occurance "Mom"
+            Console.WriteLine(str.Substring(3)); // returns the string after index 3
+            Console.WriteLine($"\"{str}\""); // return escape sequence characters like " etc
             //*/
 
             /*
-             int age = 17;
-             bool lincense = false;
+            int age = 17;
+            bool lincense = false;
 
-             if (age > 18 && lincense == true)
-             {
-                 Console.WriteLine("You can drive");
-             }
-             else if (age > 18 && lincense == false)
-             {
-                 Console.WriteLine("You do not have the required lincense to drive");
-             }
-             else
-             {
-                 Console.WriteLine("You can't drive because of less age");
-             }
+            if (age > 18 && lincense == true)
+            {
+                Console.WriteLine("You can drive");
+            }
+            else if (age > 18 && lincense == false)
+            {
+                Console.WriteLine("You do not have the required lincense to drive");
+            }
+            else
+            {
+                Console.WriteLine("You can't drive because of less age");
+            }
             //*/
 
             /*
             int day = 5;
 
-            //The value of the expression (day) is compared with the values of each case
+            // The value of the expression (day) is compared with the values of each case
             switch (day)
             {
                 case 0:
@@ -161,6 +188,63 @@ namespace Hi_Mom
                     Console.WriteLine("Tumhare dimag me bhusa bhara ha");
                     break;
             }
+            //*/
+
+            // loops
+
+            // The while loop loops through a block of code as long as a specified condition is True
+
+            /*
+            int i = 0;
+            int num = 18;
+            while (i < num)
+            {
+                Console.WriteLine(i);
+                i++;
+            }
+            //*/
+
+            // The do/while loop is a variant of the while loop. This loop will execute the code block once, before checking if the condition is true
+
+            /*
+            int i = 0;
+            int num = 18;
+            do
+            {
+                //will get executed before checking
+                Console.WriteLine(i);
+                i++;
+            } while (i < num);
+            //*/
+
+            // When you know exactly how many times you want to loop through a block of code, use the for loop instead of a while loop
+
+            /*
+            int num = 10;
+            for (int i = 0; i < num; i++)
+            {
+                if (i == 0)
+                {
+                    continue; // same as return in js - stop one iteration
+                }
+                else if (i == 4)
+                {
+                    break; // stop entire iteration
+                }
+                Console.WriteLine(i);
+            };
+            //*/
+
+            // nested for loop
+            /*
+            for (int i = 1; i < 3; i++)
+            {
+                Console.WriteLine("Outer for loop:" + i);
+                for (int j = 1; j < 3; j++)
+                {
+                    Console.WriteLine(" Inner for loop:" + j);
+                }
+            };
             //*/
 
             Console.ReadLine();
