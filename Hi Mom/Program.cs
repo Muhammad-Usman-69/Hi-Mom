@@ -130,6 +130,39 @@ namespace Hi_Mom
              }
             //*/
 
+            /*
+            int day = 5;
+
+            //The value of the expression (day) is compared with the values of each case
+            switch (day)
+            {
+                case 0:
+                    Console.WriteLine("Sunday");
+                    break;
+                case 1:
+                    Console.WriteLine("Monday");
+                    break;
+                case 2:
+                    Console.WriteLine("Tuesday");
+                    break;
+                case 3:
+                    Console.WriteLine("Wednesday");
+                    break;
+                case 4:
+                    Console.WriteLine("Thursday");
+                    break;
+                case 5:
+                    Console.WriteLine("Friday");
+                    break;
+                case 6:
+                    Console.WriteLine("Saturday");
+                    break;
+                default:
+                    Console.WriteLine("Tumhare dimag me bhusa bhara ha");
+                    break;
+            }
+            //*/
+
             Console.ReadLine();
         }
     }
