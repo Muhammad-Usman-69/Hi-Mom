@@ -112,6 +112,23 @@ namespace Hi_Mom
              Console.WriteLine($"\"{str}\""); // return escape sequence characters like " etc
             //*/
 
+            /*
+             int age = 17;
+             bool lincense = false;
+
+             if (age > 18 && lincense == true)
+             {
+                 Console.WriteLine("You can drive");
+             }
+             else if (age > 18 && lincense == false)
+             {
+                 Console.WriteLine("You do not have the required lincense to drive");
+             }
+             else
+             {
+                 Console.WriteLine("You can't drive because of less age");
+             }
+            //*/
 
             Console.ReadLine();
         }
